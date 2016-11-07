@@ -1,4 +1,4 @@
-package controller; 
+package controller;
 
 import vue.FenetreRechercher;
 import vue.FenetrePrincipale;
