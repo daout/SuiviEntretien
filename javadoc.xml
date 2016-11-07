@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="C:\Users\34011-73-06\Desktop\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar;C:\Users\34011-73-06\Desktop\eclipse\plugins\org.hamcrest.core_1.3.0.v201303031735.jar;conector/mysql-connector-java-5.0.8-bin.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="modele.valueObject,modele.dataAccesObject,test,vue,modele.conection,controller,modele" source="1.6" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
