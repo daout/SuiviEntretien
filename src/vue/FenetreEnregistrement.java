@@ -19,7 +19,7 @@ import modele.valueObject.MotoVo;
  */
 public class FenetreEnregistrement extends JFrame implements ActionListener {
 
-	/** patron modele view pour représenter les fenêtres et interface graphique 
+	/** patron modele view pour représenter les fenêtres et interface graphique  
 	 * qui permettent l'interaction entre l 'application et le client 
 	 * 
 	 */
@@ -68,7 +68,7 @@ public class FenetreEnregistrement extends JFrame implements ActionListener {
 
 		adresse = new JLabel();
 		adresse.setText("Adresse");
-		adresse.setBounds(20, 120, 80, 25);
+		adresse.setBounds(20, 120, 80, 25); 
 		add(adresse);
 		
 		codePostal = new JLabel();
@@ -215,8 +215,6 @@ public class FenetreEnregistrement extends JFrame implements ActionListener {
 				monNouveauClient.setTelephoneClient(Integer.parseInt(textTelephone.getText()));
 				monNouveauClient.setMailClient(textMail.getText());
 				
-				monCoordinateur.enregistrerNouveauClient(monNouveauClient);
-				
 				/**On recupere les JTextField de la moto nouveau Client */
 				
 				MotoVo maNouvelleMoto = new MotoVo();
@@ -225,10 +223,12 @@ public class FenetreEnregistrement extends JFrame implements ActionListener {
 				maNouvelleMoto.setModeleMoto(textModeleMoto.getText());
 				maNouvelleMoto.setAnneeMoto(Integer.parseInt(textAnneeMoto.getText()));
 				
+				monCoordinateur.enregistrerNouveauClient(monNouveauClient);
 				monCoordinateur.enregistrerNouvelleMoto(maNouvelleMoto);
+				clean();
 				this.dispose();
 				
-			} catch (Exception ex) {
+			} catch (Exception ex) { 
 				JOptionPane.showMessageDialog(null, "Erreur d'enregistrement de donnees", "Erreur",
 						JOptionPane.ERROR_MESSAGE);
 			}

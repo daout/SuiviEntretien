@@ -29,9 +29,13 @@ public class Coherence {
 	{
 		PersonneDao monClientDaoEnregistrementClient;
 		
+		if (monClient.getNomPersonne().length()<2) {
+			JOptionPane.showMessageDialog(null,"Le nom du client doit comporter au moins 2 lettres","Infos",JOptionPane.WARNING_MESSAGE);
+		}
+		else {
 			monClientDaoEnregistrementClient = new PersonneDao();
 			monClientDaoEnregistrementClient.enregisterClient(monClient);	
-		 
+		}
 	}
 	
 	public void validerNouvelleMoto(MotoVo maMoto)
@@ -79,7 +83,7 @@ public class Coherence {
 			monCLientDaoModificationClient.modifierClient(monCLient);	
 			modificationCLient=true;
 		}else{
-			JOptionPane.showMessageDialog(null,"Le prenom du client doit comporter au moins 2 lettres","Infos",JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(null,"Le nom du client doit comporter au moins 2 lettres","Infos",JOptionPane.WARNING_MESSAGE);
 			modificationCLient=false;
 		}
 	}
