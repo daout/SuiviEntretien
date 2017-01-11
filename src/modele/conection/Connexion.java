@@ -13,7 +13,7 @@ import java.sql.*;
 public class Connexion 
 
 {
-   static String bd = "suivi entretien";  /// nom de la base de données
+   static String bd = "suivientretien";  /// nom de la base de données
    static String login = "root";
    static String password = "";
    static String url = "jdbc:mysql://localhost/"+bd;
